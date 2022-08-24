@@ -2,6 +2,7 @@
   "name": "foss4g-2022-webassembly4g",
   "version": "0.1.0",
   "private": true,
+  "repository": "github:boardend/foss4g-2022-webassembly4g",
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
