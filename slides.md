@@ -63,6 +63,7 @@ https://starboard.gg/#python
 
 http://localhost:4000/app-multi-release/
 
+https://wonder-sk.github.io/wasm/qgis.html
 -->
 
 ---
@@ -79,7 +80,7 @@ http://localhost:4000/app-multi-release/
 <ul>
   <li v-click="2">☕ <b>-&gt;</b> <s>🇨🇭 🚅 ⛰️ 🇮🇹</s> <b>-&gt;</b><s>FOSS4G 2022 @ Firenze 🌍</s>
     <ul>
-      <li v-click="3">☕ <b>-&gt;</b> 😯🤔 <b>-&gt;</b> 🧪 <b>-&gt;</b> ☑️ <b>-&gt;</b> FOSS4G 2022 @ Home <b>-&gt;</b> ☕🖥️👌<br /></li>
+      <li v-click="3">☕ <b>-&gt;</b> 😯🤔 <b>-&gt;</b> 🧪 <b>-&gt;</b> ☑️ 😷 <b>-&gt;</b> FOSS4G 2022 @ Home <b>-&gt;</b> ☕🖥️👌<br /></li>
       <li v-click="4"><s>2022-08-25, 17:15–17:45 @ Room Limonaia</s> <b>-&gt;</b> 2022-08-<b>26</b>, 14:45–15:15 @ General online</li>
       <li v-click="5">Many thanks to the organizers of FOSS4G 2022 🙌</li>
     </ul>
@@ -220,7 +221,7 @@ https://boardend.github.io/fossgis-2021-webassembly/#/wasm
 
 <br />
 
-- `.wasm` modules with a couple of MBs in size
+- `.wasm` modules with a couple of MB in size
   - Examples: Computational statistics, decoding, ...
   - Size- and load-time-efficient binary format
   - Cachable / Offline
@@ -228,8 +229,8 @@ https://boardend.github.io/fossgis-2021-webassembly/#/wasm
 
 <br />
 
-- Often transparent for the library user
-  - API usualy written in TypeScript/JavaScript
+- Often implicit for the library user
+  - API usually written in TypeScript/JavaScript
   - Fallback JS implementation possible
 ---
 
@@ -368,11 +369,28 @@ Full linux kernel running in the browser
 
 <br />
 
-- TODO: Portabilty, Security
+<div class="m2 flex justify-center">
+  <img src="/webassembly_runtime.png" style="height:20em;" />
+</div>
 
-- TODO: Runtimes
+<!--
+  Portabilty, Security
+  Runtimes
+-->
 
-- TODO: https://blog.scottlogic.com/2022/06/20/state-of-wasm-2022.html
+---
+
+## State of WebAssembly runtimes 2022
+
+<br />
+
+<div class="m2 flex justify-center">
+  <img src="/runtimes.png" style="height:18em;" />
+</div>
+
+<br />
+
+- Source: **The State of WebAssembly 2022** <br /> https://blog.scottlogic.com/2022/06/20/state-of-wasm-2022.html
 
 
 ---
@@ -380,25 +398,58 @@ Full linux kernel running in the browser
 
 # Adoption outside of browsers
 
+## WASI
+
+<br />
+
+- **The WebAssembly System Interface** (WASI)
+
+  - WASI offers a standardized set of APIs for WebAssembly modules to access system resource
+    - such as a FileSystem, Environment variables, Networking, Time, Random, ...
+
+  - Design Principles
+
+    - Capability-based security
+    - Interposition
+    - Compatibility
+    - Portability
+
+
+---
+
+# Adoption outside of browsers
+
 ## Other examples
 
 <br />
 
-- TODO Exmaple: Lambda function (FaaS)
+- Exmaple: **WebAssembly function as a service (FaaS)**
 
-- TODO Example: Postgres function
+  - WebAssembly on Amazon Lambda, Cloudflare Workers, ...
 
+<br />
+
+- Example: **WebAssembly Module as PostgreSQL function**
+
+  - WebAssembly Module loaded from within the database
+
+  - Integrations:
+    - [PLV8](https://github.com/plv8/plv8)
+    - [Wasmer Postgres](https://github.com/wasmerio/wasmer-postgres)
 
 
 ---
 
 # Ability to reuse existing libraries
 
-- TODO
 
-  - Logo: C/C++
-  - Logo: Rust
-  - Logo: Python
+<img v-click="1" src="/logo_cpp.svg" class="absolute top-40 left-10" style="height:8em"/>
+
+<img v-click="2" src="/logo_osgeo.png" class="absolute top-80 left-30" style="height:8em"/>
+
+<img v-click="3" src="/logo_rust.svg" class="absolute top-40 left-65" style="height:8em"/>
+
+<img v-click="4" src="/logo_python.svg" class="absolute top-40 right-5" style="height:8em"/>
 
 
 ---
@@ -414,47 +465,72 @@ Full linux kernel running in the browser
 
 ---
 
-# Evolutoin of WebAssembly
+# Evolution of WebAssembly
 
-- TODO
+- One of the fastest web standars implemented
+- Keep getting better since
+  - Threads and atomics, Fixed-width SIMD, DWARF Debugging, ...
+  - WebAssembly System Interface (WASI)
 
-- WebAssembly history
-  - One of the fastest
-  - Keep getting better since
-    - Threads and atomics
-    - Fixed-width SIMD
-    - DWARF Debugging
-  - WASI
+<br />
+
+<v-click>
 
 - WebAssembly proposals
   - Component Model
-    - Interface types: a language-agnostic way to define a module interface in terms of high-level types such as strings, records, collections, etc.
-    - A canonical ABI which specifies how high-level types are represented in terms of the low-level types of core WebAssembly
-    - Module and component linking: a mechanism for dynamically composing modules into components. These components may themselves be composed together into higher-level components.
+    - Interface types: high-level types such as strings, records, collections, etc.
+    - A canonical ABI which specifies how high-level types are represented
+    - Module and component linking: a mechanism for dynamically composing modules
   - Garbage Collection (GC)
-    - 
   - Many more
     - https://github.com/WebAssembly/proposals
     - https://chromestatus.com/features#tags%3Awebassembly
+
+</v-click>
 
 ---
 
 # Atlas of Switzerland
 
-TODO add screenshots
+- Official national Atlas of Switzerland
+
+  - 400+ Maps
+  - 3D Globe based on [osgEarth]()
+
+- "Atlas of Switzerland – online"
+
+  - Data downloaded on the fly
+
+  - Clients for **Windows** and **MacOS**
+
+<img src="/ads0.png" class="absolute top-15 right-10" style="width:20em"/>
+
+<img src="/ads1.png" class="absolute bottom-10 right-10" style="width:22em;transform: rotate(3deg);"/>
+
+<img src="/logo_ads.png" class="absolute bottom-10 left-25" style="width:8em"/>
 
 ---
 
 
 # osgEarth WebAssembly
 
-- Side Project
+- Personal Side Project
+
+  - Started in 2019 to port osgEarth, GEOS, PROJ, GDAL, SpatiaLite, and Co. to the web
+  - On and off ever since
 
 - Not Ready yet
 
+  - Currently in private alpha
+  - Hopefully I can shere the project in the upcomming months
+
 - Next Steps
 
-- Demo Time
+  - Bring patches to the upstream projects
+  - Publish a npm package
+  - Explore how to port the Atlas of Switzerland to the web platform
+
+
 
 ---
 
@@ -466,6 +542,73 @@ TODO add screenshots
   <img src="/screenshot_osgearthwasm.png" style="width:70%;" />
 </div>
 
+
+---
+
+# osgEarth WebAssembly Demo
+
+```xml
+<OGRFeatures name="country-data">
+  <url>/module-scene-osgearth/world.shp</url>
+  <filters>
+    <buffer distance="-0.08" />
+  </filters>
+</OGRFeatures>
+```
+
+---
+
+# osgEarth WebAssembly Demo
+
+```xml
+<styles>
+  <style type="text/css">
+    <![CDATA[
+      base {
+        altitude-clamping: terrain-drape;
+        text-provider:  annotation;
+        text-content:   [code];
+        text-priority:  [pop];
+        text-align:     center_center;
+        text-size:      15;
+        text-declutter: true;
+      }
+      p1: base {
+        fill: #016c59;
+      }
+      p2: base {
+        fill: #1c9099;
+      }
+      p3: base {
+        fill: #67a9cf;
+      }
+      ...
+```
+
+
+---
+
+# osgEarth WebAssembly Demo
+
+```xml
+  ...
+  <selector class_expr="getStyleClass()" />
+  <script language="javascript">
+    <![CDATA[
+      function getStyleClass() {
+        const pop = parseInt(feature.properties.pop);
+        if (pop >= 50_000_000) return "p1";
+        else if (pop >= 20_000_000) return "p2";
+        else if (pop >= 10_000_000) return "p3";
+        else if (pop >= 5_000_000) return "p3";
+        else return "p5";
+      }
+    ]]>
+  </script>
+</styles>
+```
+
+
 ---
 
 # osgEarth WebAssembly Libraries
@@ -475,6 +618,28 @@ TODO add screenshots
 
 <img src="/dependencies.drawio.svg" />
 
+<div class="absolute top-30 left-160">
+
+- `osgEarth.wasm`
+
+  - One big staticaly linked module
+    - `26M` .wasm module
+    - `325K` .js glue code
+
+<br />
+
+- ~ 30 patches needed for the libraries
+
+<br />
+
+- More libraries to come
+
+  - Vector Tiles
+  - 3D Tiles
+  - ...
+
+
+</div>
 
 ---
 
@@ -554,11 +719,11 @@ emcc helloworld.cpp -o helloworld.js
 
 ---
 
-# Emscripten: Waht it does?
+# Emscripten: What it does?
 
 - The main tool is the **Emscripten Compiler Frontend** (`emcc`)
   - Drop-in replacement for a standard compiler like **gcc** or **clang**
-  - Supports the common falgs from **gcc** and **clang**
+  - Supports the common flags from **gcc** and **clang**
     - Introduces also many Emscripten specifig compiler/linker flags [^1]
 
 <br />
@@ -577,11 +742,11 @@ emcc helloworld.cpp -o helloworld.js
 
 ---
 
-# Emscripten: Waht it does?
+# Emscripten: What it does?
 
 - **"Emscripten Magic"**
   - Emscripten can be used to compile almost any portable C/C++ code to JavaScript
-  - System library provided by Emscripten
+  - System libraries provided by Emscripten
     - SDL, Multimedia and Graphics, Networking, File System, Audio, ...
   - Binding between JS and WebAssembly
 
@@ -600,33 +765,40 @@ emcc helloworld.cpp -o helloworld.js
 ---
 
 # Tips and tricks
+
+<br />
+<br />
+
+<v-click>
+
 ## OffscreenCanvas / Multithreading
 
----
+</v-click>
 
-# Tips and tricks
+<br />
+
+<v-click>
+
 ## Pipeline for native and wasm builds
 
-- Build Pipeline for Native and Wasm Builds
-  - Some libs need that anyway
-  - Faster turnaround
+</v-click>
 
----
+<br />
 
-# Tips and tricks
+<v-click>
+
 ## Turn Around Time
 
-- Compile in small modules, link later
-- Use a build cache (!)
+</v-click>
 
----
+<br />
 
-# Tips and tricks
+<v-click>
+
 ## Debugging
 
-- DWARF Debugging
-- Screenshot
-- Link to Web Blog
+</v-click>
+
 
 
 ---
@@ -655,8 +827,6 @@ class: text-center
 
 # 🔮 Portable PyPI/npm packges with "native" bindings?
 
-<br />
-
 - The same problem exists for Python/JS package registries
 - If a package depends on code with "native" bindings
 
@@ -681,29 +851,56 @@ class: text-center
 # 🔮 QGIS in the browser?
 
 - Why I think it is possible?
-  - [Qt](https://doc.qt.io/qt-6/wasm.html) is doing fine
-  - [Python]() is doing fine
+  - [Qt](https://doc.qt.io/qt-6/wasm.html) is doing fine (as seen earlier)
+  - [Python]() is doing fine (as seen earlier)
   - Dependencies almost identical to the stack showed earlier
+
+<br />
+
+<v-click>
 
 - Ok fine, but why?
   - Online Playground, People who cannot install/use QGIS, ...
-  - ***Disclaimer***: You probaly still want a desktop GIS compiled for your local system
+  - ***Disclaimer***: You probably still want a desktop GIS compiled for your local system
+
+</v-click>
+
+<br />
+
+<v-click>
 
 - What has been done so far?
+  - QGIS Renderer: https://wonder-sk.github.io/wasm/qgis.html
+    - By [Martin Dobias](https://github.com/wonder-sk), announced in the [QGIS mailing list](https://lists.osgeo.org/pipermail/qgis-developer/2022-March/064589.html)
+
+</v-click>
 
 ---
 
 
 # 🔮 Composable toolbox of geospatial .wasm modules
 
-- Advancement in the WebAssembly specs
+- Disclaimer: Advancement in the WebAssembly specs/implementation needed
+  - Waiting for the "Component Model" proposal
 
-- Think about a model builder in a desktop GIS
+<br />
+
+<v-click>
+
+- Think about a model builder in a Desktop GIS
   - Source language doesn't matter
   - Single universal .wasm "binary"
 
+</v-click>
+
+<br />
+
+<v-click>
+
 - Reuse the same modules
-  - Clinet/Web, FaaS, DB, "Edge", plugin system, ...
+  - Client/Web, FaaS, DB, "Edge", plugin system, ...
+
+</v-click>
 
 ---
 
@@ -770,4 +967,3 @@ class: text-center
 <br />
 
 <img style="height:8em;display:inline-block;background-color:white;padding: 1em;margin-top:2em;" src="/foss4g2022_logo.png" />
-
