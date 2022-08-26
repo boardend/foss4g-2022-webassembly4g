@@ -1,6 +1,6 @@
 # WebAssembly4G: Where we are, and where we're heading
 
-General track @ **[FOSS4G 2022 - Firenze](https://2022.foss4g.org/)**, *2022-08-25, 17:15–17:45 (Europe/Rome), Online / Room Limonaia*
+General track @ **[FOSS4G 2022 - Firenze](https://2022.foss4g.org/)**, *2022-08-26, 14:45–15:15 (Europe/Rome), General Online*
 
 > **Video**: TBD
 
