@@ -189,23 +189,23 @@ https://boardend.github.io/fossgis-2021-webassembly/#/wasm
 -->
 
 <v-click>
-  <img class="absolute left-20 top-25" style="z-index:1;width:12vw;transform: rotate(-5deg);" src="/wasm_compilation.png" alt="Webassembly compilation">
+  <img class="absolute left-20 top-25" style="z-index:1;width:12vw;transform: rotate(-5deg);" src="/wasm_compilation.png" alt="WebAssembly compilation">
 </v-click>
 
 <v-click>
-  <img class="absolute top-15 right-20" style="z-index:1;width:12vw;transform: rotate(5deg);" src="/wasm_design.png" alt="Webassembly design">
+  <img class="absolute top-15 right-20" style="z-index:1;width:12vw;transform: rotate(5deg);" src="/wasm_design.png" alt="WebAssembly design">
 </v-click>
 
 <v-click>
-  <img class="absolute bottom-35 left-20" style="z-index:1;width:12vw" src="/wasm_party.png" alt="Webassembly browser party">
+  <img class="absolute bottom-35 left-20" style="z-index:1;width:12vw" src="/wasm_party.png" alt="WebAssembly browser party">
 </v-click>
 
 <v-click>
-  <img class="absolute top-80 right-15" style="z-index:1;width:18vw;transform: rotate(0deg);" src="/wasm_security.png" alt="Webassembly Security">
+  <img class="absolute top-80 right-15" style="z-index:1;width:18vw;transform: rotate(0deg);" src="/wasm_security.png" alt="WebAssembly Security">
 </v-click>
 
 <v-click>
-  <img class="absolute bottom-5 left-75" style="z-index:1;width:12vw" src="/wasm_runtime.png" alt="Webassembly Runtime">
+  <img class="absolute bottom-5 left-75" style="z-index:1;width:12vw" src="/wasm_runtime.png" alt="WebAssembly Runtime">
 </v-click>
 
 <div style="position:absolute;z-index:10;margin-left:-4em;margin-top:3em;width:100%;text-align:center">
@@ -224,7 +224,7 @@ https://boardend.github.io/fossgis-2021-webassembly/#/wasm
 - `.wasm` modules with a couple of MB in size
   - Examples: Computational statistics, decoding, ...
   - Size- and load-time-efficient binary format
-  - Cachable / Offline
+  - Cacheable / Offline
   - Asynchronous / Multithreading
 
 <br />
@@ -274,7 +274,7 @@ https://boardend.github.io/fossgis-2021-webassembly/#/wasm
   - Porting of large/old code bases
   - WebGL, Audio, Network, File system, ...
 
-- Commercial success storries
+- Commercial success stories
   - [Figma](https://www.figma.com/de/blog/webassembly-cut-figmas-load-time-by-3x/)
   - [Adobe **Photoshop**](https://web.dev/ps-on-the-web/)
   - [Autodesk **AutoCAD**](https://web.autocad.com)
@@ -301,14 +301,14 @@ https://boardend.github.io/fossgis-2021-webassembly/#/wasm
 
 - [Google Earth](https://earth.google.com/web/)
   - WebGL 3D globe
-  - Visualisation of raster and vector datasets
+  - Visualization of raster and vector datasets
 - [Google Earth Studio](https://earth.google.com/web/)
   - Animation tool based on the Google Earth 3D-renderer
   - Rendering und Export of frames inside the browser
 - [FFmpeg](https://ffmpeg.org/)
   - FOSS C library for video/audio recording and converting
   - [ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm)
-    - Stiched together individual frames and exported as `H264`
+    - Stitched together individual frames and exported as `H264`
 
 
 </div>
@@ -423,7 +423,7 @@ Full linux kernel running in the browser
 
 <br />
 
-- Exmaple: **WebAssembly function as a service (FaaS)**
+- Example: **WebAssembly function as a service (FaaS)**
 
   - WebAssembly on Amazon Lambda, Cloudflare Workers, ...
 
@@ -467,7 +467,7 @@ Full linux kernel running in the browser
 
 # Evolution of WebAssembly
 
-- One of the fastest web standars implemented
+- One of the fastest web standards implemented
 - Keep getting better since
   - Threads and atomics, Fixed-width SIMD, DWARF Debugging, ...
   - WebAssembly System Interface (WASI)
@@ -522,7 +522,7 @@ Full linux kernel running in the browser
 - Not Ready yet
 
   - Currently in private alpha
-  - Hopefully I can shere the project in the upcomming months
+  - Hopefully I can share the project in the upcoming months
 
 - Next Steps
 
@@ -622,7 +622,7 @@ Full linux kernel running in the browser
 
 - `osgEarth.wasm`
 
-  - One big staticaly linked module
+  - One big statically linked module
     - `26M` .wasm module
     - `325K` .js glue code
 
@@ -724,7 +724,7 @@ emcc helloworld.cpp -o helloworld.js
 - The main tool is the **Emscripten Compiler Frontend** (`emcc`)
   - Drop-in replacement for a standard compiler like **gcc** or **clang**
   - Supports the common flags from **gcc** and **clang**
-    - Introduces also many Emscripten specifig compiler/linker flags [^1]
+    - Introduces also many Emscripten specific compiler/linker flags [^1]
 
 <br />
 
@@ -830,9 +830,9 @@ class: text-center
 - The same problem exists for Python/JS package registries
 - If a package depends on code with "native" bindings
 
-  - The native code is expecated to be available as shared library (runtime error)
+  - The native code is expected to be available as shared library (runtime error)
   - Compilation is part of the installation procedure (`SIP`, `node-gyp`, ...)
-  - A binary is provided for every possible target architecure <br /> (`cp38-cp38-win_amd64.whl`, `cp38-cp38-win32.whl`, `cp36-cp36m-macosx_intel.whl`, ...)
+  - A binary is provided for every possible target architecture <br /> (`cp38-cp38-win_amd64.whl`, `cp38-cp38-win32.whl`, `cp36-cp36m-macosx_intel.whl`, ...)
 
 <br />
 
